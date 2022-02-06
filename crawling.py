@@ -31,7 +31,7 @@ while tweetCount < maxTweets:
             "tweet" : tweet.full_text.encode('utf-8')
         }
         print("Username {username} : {tweet}".format(username=dictTweet["username"], tweet=dictTweet["tweet"]))
-        with open(search_key+".csv", 'a+', newline='') as csv_file:
+        with open(today.strftime('%m_%d_%Y')+".csv", 'a+', newline='') as csv_file:
             fieldNames = ["username", "tweet"]
             writer = csv.DictWriter(csv_file, fieldnames = fieldNames, delimiter=";",)
             writer.writerow(dictTweet)
