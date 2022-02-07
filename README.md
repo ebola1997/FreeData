@@ -6,6 +6,7 @@ my subject target is "Pemilu"
 and will add "Dukcapil dalam Genggaman" from playstore later
 
 [![update-data](https://github.com/ebola1997/FreeData/actions/workflows/automation.yml/badge.svg?event=status)](https://github.com/ebola1997/FreeData/actions/workflows/automation.yml)
+[![update-data](https://github.com/ebola1997/FreeData/actions/workflows/automation.yml/badge.svg)](https://github.com/ebola1997/FreeData/actions/workflows/automation.yml)
 
 
 csv==3.10.2
