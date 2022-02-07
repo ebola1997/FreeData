@@ -1,5 +1,7 @@
 import tweepy
 import csv
+import datetime
+from datetime import date
 
 consumer_key = "k0iL0GZoHnGSfXoeHoNjAz20T"
 consumer_secret = "hzh5mBGHdDd9Ci1rNW5WIFr4zdtHt5CiL4hDeXNmscfz3904cp"
@@ -10,6 +12,7 @@ maxTweets = 1000
 search_key = "pemilu"
 maxId = -1
 tweetCount = 0
+today = date.today()
 
 authentication = tweepy.OAuthHandler(consumer_key, consumer_secret)
 authentication.set_access_token(access_token, access_secret)
