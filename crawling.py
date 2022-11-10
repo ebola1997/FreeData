@@ -1,6 +1,7 @@
 import tweepy
 import csv
 import datetime
+from tweepy import OAuthHandler
 from datetime import date
 
 consumer_key = "EY8IRAZnn7Tlejv9ppxmGeJwH"
@@ -34,7 +35,7 @@ while tweetCount < maxTweets:
             "tweet" : tweet.full_text.encode('utf-8')
         }
         print("Username {username} : {tweet}".format(username=dictTweet["username"], tweet=dictTweet["tweet"]))
-        with open("/FreeData/dataset"+today.strftime('%m_%d_%Y')+".csv", 'a+', newline='') as csv_file:
+        with open(today.strftime('%m_%d_%Y')+".csv", 'a+', newline='') as csv_file:
             fieldNames = ["username", "tweet"]
             writer = csv.DictWriter(csv_file, fieldnames = fieldNames, delimiter=",",)
             writer.writerow(dictTweet)
