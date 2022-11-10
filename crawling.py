@@ -3,10 +3,10 @@ import csv
 import datetime
 from datetime import date
 
-consumer_key = "k0iL0GZoHnGSfXoeHoNjAz20T"
-consumer_secret = "hzh5mBGHdDd9Ci1rNW5WIFr4zdtHt5CiL4hDeXNmscfz3904cp"
-access_token = "821731748-kAk1xTZLTAc1upSBptUYMW7qmiNquq8Rw6n9KOa1"
-access_secret = "mQ7oEZpzYw0PTb2kIArb3dWEDbFGwgmEKTFA6nNSGO2YW"
+consumer_key = "EY8IRAZnn7Tlejv9ppxmGeJwH"
+consumer_secret = "OP0neJHeUl3wQsUqrBE3xZR3JY71xlMILih4fV2aqnMRCca5HT"
+access_token = "1635682130-tUaBntA15MIrC3VkrUjIm96uJXkoDussNAFmmip"
+access_secret = "gnLkQkZG9M1HMfz2M2DQwC9wupeSxyAYnc3AcqWCeiLzh"
 tweetsPerQry = 100
 maxTweets = 1000
 search_key = "pemilu"
@@ -34,7 +34,7 @@ while tweetCount < maxTweets:
             "tweet" : tweet.full_text.encode('utf-8')
         }
         print("Username {username} : {tweet}".format(username=dictTweet["username"], tweet=dictTweet["tweet"]))
-        with open(today.strftime('%m_%d_%Y')+".csv", 'a+', newline='') as csv_file:
+        with open("/FreeData/dataset"+today.strftime('%m_%d_%Y')+".csv", 'a+', newline='') as csv_file:
             fieldNames = ["username", "tweet"]
             writer = csv.DictWriter(csv_file, fieldnames = fieldNames, delimiter=",",)
             writer.writerow(dictTweet)
